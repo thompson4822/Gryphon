@@ -21,4 +21,10 @@ class PersonController(private val personService: PersonService) {
     ): ResponseEntity<PersonResponseDto> =
         ResponseEntity.ok(personService.getPeople(pageNo, pageSize, sortBy, sortDir))
 
+    /*
+    Add the following:
+    - Update
+    - Add
+    - Delete
+     */
 }

@@ -5,6 +5,5 @@ import com.overbyte.gryphon.entity.Store
 
 data class ProductCountDto(
     val product: ProductDto?,
-    val store: StoreDto?,
     val units: Int?,
 )

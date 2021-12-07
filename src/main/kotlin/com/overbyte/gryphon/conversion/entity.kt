@@ -1,13 +1,7 @@
 package com.overbyte.gryphon.conversion
 
-import com.overbyte.gryphon.dto.AddressDto
-import com.overbyte.gryphon.dto.CredentialsDto
-import com.overbyte.gryphon.dto.PersonDto
-import com.overbyte.gryphon.dto.StoreDto
-import com.overbyte.gryphon.entity.Address
-import com.overbyte.gryphon.entity.Credentials
-import com.overbyte.gryphon.entity.Person
-import com.overbyte.gryphon.entity.Store
+import com.overbyte.gryphon.dto.*
+import com.overbyte.gryphon.entity.*
 
 fun Person.toDto() =
     PersonDto(id, firstName, lastName, phone, address?.toDto(),
@@ -66,3 +60,6 @@ fun StoreDto.toEntity(): Store {
     store.image = image
     return store
 }
+
+fun Product.toDto() =
+    ProductDto(id, name, description, publisher, baseCost, image)
